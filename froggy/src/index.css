@@ -1,0 +1,149 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #035001;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #34ae0f;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #34ae0f;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #34ae0f;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.Gamestart-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* keeps items centered horizontally */
+  justify-content: flex-start; /* moves content to the top vertically */
+  min-height: 100vh;       /* full viewport height, so "top" is top of page */
+  padding-top: 20px;       /* optional: add space from the very top */
+}
+
+.level {
+  display: flex;
+  flex-direction: column;        /* stack items vertically */
+  align-items: center;           /* center horizontally */
+  justify-content: center;       /* center vertically */
+  width: 200px;                  /* a bit wider for text wrapping */
+  height: 150px;
+  background-color: #34ae0f;
+  border-radius: 10px;
+  font-family: sans-serif;
+  font-size: 1.2em;
+  transition: 0.3s ease;
+}
+
+.level-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 36px;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Create a sliding underline */
+.level-link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 100%;
+  height: 3px;
+  background: white;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.level-link:hover::after {
+  transform: scaleX(1);
+}
+
+.levels-row {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+
+.level:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  border: 2px solid #1a70df;
+}
+
+.back-button {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  background: #228B22;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1000; /* Makes sure it stays on top */
+  transition: background 0.2s;
+}
+.back-button:hover {
+  background: #34ae0f;
+  transition: 0.3s ease;
+  transform: scale(1.05);
+  border: 2px solid #1a70df;
+
+
+
+}
+
+.Gamestart-title {
+  font-size: 100px;
+}

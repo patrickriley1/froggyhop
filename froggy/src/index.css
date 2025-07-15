@@ -181,20 +181,32 @@ button:focus-visible {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  overflow: hidden; /* if you never want scrollbars */
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  position: relative; /* Needed for absolute children */
 }
 
 
-.Gamestart-body {
-  background-image: url('/swamp background.png');
+.game-background {
+  background-image: url('/assets/lake-bg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
 }
+
 
 .menu-button {
   position: absolute;
   top: 1rem;
   left: 1rem;
-  z-index: 10;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }

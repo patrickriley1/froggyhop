@@ -11,6 +11,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
 }
 
 a {
@@ -148,7 +149,7 @@ button:focus-visible {
   font-size: 100px;
 }
 
-body {
+.App-body {
   min-width: 100vw;
   margin: 0;
   background-image: url('/swamp background.png');
@@ -174,8 +175,24 @@ body {
 }
 
 .level1-body {
+  width: 100vw;
+  height: 100vh;
   background-image: url('/Level1R.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  overflow: hidden; /* if you never want scrollbars */
 }
+
+.level1-container {
+  position: relative;
+}
+
+.Gamestart-body {
+  background-image: url('/swamp background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden; /* Prevents scrollbars */
+}
+

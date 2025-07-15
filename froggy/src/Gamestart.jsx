@@ -1,12 +1,13 @@
 import react from 'react'
 import './App.css'
 import { useNavigate } from 'react-router-dom'
+import './index.css'
 
 function Gamestart() {
   const navigate = useNavigate(); // Hook from React Router
 
   return (
-    <body>
+    <body className='Gamestart-body'>
       <div className="Gamestart">
         <button className="back-button" onClick={() => navigate(-1)}>
           ←

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import App from './App.jsx'
 import Gamestart from './Gamestart.jsx' // create this file
-import Level1 from './Level1.jsx' 
+import Level1 from './Levels/Level1.jsx' 
 import './index.css'
 import About from './About.jsx' // create this file
 import Store from './Store.jsx' // create this file

@@ -7,7 +7,7 @@ function App() {
   const navigate = useNavigate(); // Hook from React Router
 
   return (
-    <body>
+    <body className='App-body'>
     <div className="App">
       <header className="App-header">
         <h1 style={{ color: 'white'}}>Welcome to Froggy Hop!</h1>

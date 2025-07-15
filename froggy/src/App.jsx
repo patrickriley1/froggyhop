@@ -7,13 +7,21 @@ function App() {
   const navigate = useNavigate(); // Hook from React Router
 
   return (
+    <body>
     <div className="App">
       <header className="App-header">
-        <h1 style={{ color: '#34ae0f'}}>Welcome to Froggy Hop!</h1>
-        <p>The Makers of this game are Andrew and Patrick, Andrew made this game because he likes games and his favorite animal is frogs. Patrick made this game, because he likes coding, and his cousin likes frogs.</p>
-        <button onClick={() => navigate('/gamestart')} className="start-button">
-          START
-        </button>
+        <h1 style={{ color: 'white'}}>Welcome to Froggy Hop!</h1>
+        <div className='buttons' style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
+          <button onClick={() => navigate('/gamestart')} className="start-button">
+            START
+          </button>
+          <button onClick={() => navigate('/About')} className="other-button">
+            About
+          </button>
+          <button onClick={() => navigate('/Store')} className="other-button">
+            Store
+          </button>
+        </div>
         <audio autoPlay loop>
         <source src="/Louisiana Cicada Frogs Tropical Storm ASMR Soundscape.mp3" type="audio/mpeg" />
         Your browser does not support the audio element.
@@ -23,8 +31,8 @@ function App() {
         Your browser does not support the audio element.
       </audio>
       </header>
-
     </div>
+    </body>
   )
 }
 

@@ -1,6 +1,11 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './App.css'
+import Gamestart from './Gamestart'
+import './index.css'
+import Level1 from './Level1'
+import About from './About'
+import Store from './Store'
 
 function App() {
   const [count, setCount] = useState(0)

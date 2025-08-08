@@ -1,6 +1,7 @@
 import react from 'react'
 import './App.css'
 import { useNavigate } from 'react-router-dom'
+import { useState } from 'react'
 import './index.css'
 
 function Gamestart() {

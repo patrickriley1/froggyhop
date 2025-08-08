@@ -175,16 +175,18 @@ button:focus-visible {
 }
 
 .level1-body {
+  position: fixed;
+  top: 0; 
+  left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url('/Level1R.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow: hidden;
   margin: 0;
   padding: 0;
-  position: relative; /* Needed for absolute children */
+  overflow: hidden;
+  background-image: url('/Level1R1.png'); /* or your image */
+  background-size: auto 100%;
+  background-position: top left;
+  background-repeat: repeat-x;
 }
 
 
@@ -202,6 +204,7 @@ button:focus-visible {
   position: absolute;
   top: 1rem;
   left: 1rem;
+  z-index: 1000; /* Ensure it stays on top */
 }
 
 html, body {
@@ -209,4 +212,26 @@ html, body {
   width: 100%;
   margin: 0;
   padding: 0;
+}
+
+.Gamestart-body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/swamp background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.level1-title {
+  font-size: 70px;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  position: absolute;
+  top: 1rem;
+  left: 42%;
 }

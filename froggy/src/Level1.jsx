@@ -49,7 +49,7 @@ useEffect(() => {
     if (!gameStarted) return;
     let raf;
     const moveBg = () => {
-      setBackgroundX(x => (x - 1)); // Move background left
+      setBackgroundX(x => (x - 2)); // Move background left
       raf = requestAnimationFrame(moveBg);
     };
     moveBg();

@@ -1,6 +1,36 @@
 {
   "rewrites": [
     { "source": "/(.*)", "destination": "/" }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/"
+    },
+    {
+      "src": "/gamestart",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/level1",
+      "dest": "/"
+    },
+    {
+      "src": "/level2",
+      "dest": "/"
+    },
+    {
+      "src": "/level3",
+      "dest": "/"
+    },
+    {
+      "src": "/level4",
+      "dest": "/"
+    },
+    {
+      "src": "/level5",
+      "dest": "/"
+    }
   ]
 }
  

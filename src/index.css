@@ -175,7 +175,7 @@ button:focus-visible {
 }
 
 .level1-body {
-  position: fixed;
+  position: relative;
   top: 0; 
   left: 0;
   width: 100vw;
@@ -188,6 +188,26 @@ button:focus-visible {
   background-position: top left;
   background-repeat: repeat-x;
   will-change: background-position;
+}
+
+.bg-strip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+}
+
+.bg-strip img {
+  flex-shrink: 0;
+  height: 100%;
+  object-fit: cover;
+}
+
+.froggy-moving & { /* when your gameStarted flag is true, add a class */
+  .bg-strip {
+    will-change: transform;
+  }
 }
 
 

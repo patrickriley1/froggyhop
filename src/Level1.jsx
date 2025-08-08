@@ -1,4 +1,4 @@
-import React, { use } from "react";
+import React from "react";
 import { useNavigate } from 'react-router-dom';
 import { useState, useRef, useEffect } from 'react';
 
@@ -25,6 +25,7 @@ function Level1() {
     const jumpingRef = useRef(false);
     const frogYRef = useRef(GROUND_Y);
     const jumpAudioRef = useRef(new Audio('/frogjump.mp3'));
+    const bgRef = useRef(null);
 
     // Handle jump
   const handleJump = () => {
@@ -52,7 +53,7 @@ useEffect(() => {
     x -= 4;
     // here we do a direct DOM write instead of setState
     if (bgRef.current) {
-      bgRef.current.style.backgroundPositionX = x + "px";
+      bgRef.current.style.transform = `translateX(${x}px)`
     }
     requestAnimationFrame(move);
   }
@@ -100,8 +101,12 @@ useEffect(() => {
       tabIndex={0}
       onClick={handleJump}
     >
+        <div className="bg-strip">
+    <img src="/public/Level1R1.png" />
+    <img src="/public/Level1R1.png" />
+  </div>
       <audio ref={musicRef} autoPlay loop>
-        <source src="/Level1music.mp3" type="audio/mpeg" />
+        <source src="/public/Level1music.mp3" type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
       <h1 className="level1-title">Level 1</h1>

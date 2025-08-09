@@ -9,7 +9,7 @@ function Level1() {
     const GAME_WIDTH = '100vw';
     const GAME_HEIGHT = '100vh';
     const GROUND_Y = 740;
-    const GRAVITY = 1;
+    const GRAVITY = .4;
     const JUMP_VELOCITY = -15;
 
     // State

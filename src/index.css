@@ -237,7 +237,7 @@ html, body {
 
 .Gamestart-body {
   width: 100vw;
-  height: 100vh;
+  height: 100vh auto;
   background-image: url('/swamp background.png');
   background-size: cover;
   background-position: center;
